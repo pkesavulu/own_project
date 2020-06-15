@@ -1,0 +1,12 @@
+Q)hi
+A)hi
+Q)what is your name
+A)i am dumbu
+Q)how are you
+A)i am fine how are you too
+Q)ya fine
+A)good
+Q)i am fine
+A)good
+Q)ya i am so fine
+A)good
