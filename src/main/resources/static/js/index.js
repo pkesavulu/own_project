@@ -2,6 +2,7 @@ var host = "http://localhost:8080/robo";
 
 function answerOfYourQuestion(){
 var question=document.getElementById("textMessage").value;
+if(question!=""){
 console.log(question)
 $('#textMessage').val('');
  $('.maindiv').empty();
@@ -16,4 +17,8 @@ $.ajax({
 	console.log(error);
 	}
 });
+}
+else{
+alert("you forgot to ask question");
+}
 }

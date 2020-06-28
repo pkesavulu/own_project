@@ -15,11 +15,15 @@ public class FileReader {
 			 * for (String line : allLines) { if(line.startsWith("Q")) {
 			 * System.out.println(line); } }
 			 */
-			
+
 			for (int i = 0; i <= allLines.size(); i++) {
+				if (i == allLines.size()) {
+					break;
+				}
 				System.out.println(allLines.get(i));
-				System.out.println(allLines.get(i+1));
-				i=i+2;
+				System.out.println(allLines.get(i + 1));
+				System.out.println("=======================");
+				i = i + 1;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

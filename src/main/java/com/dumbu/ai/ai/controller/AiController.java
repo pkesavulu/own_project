@@ -18,11 +18,11 @@ public class AiController {
 
 	@Autowired
 	private AiService aiService;
-	
+
 	@GetMapping(value = "/")
 	public String index() {
 		return "index";
-	} 
+	}
 
 	@PostMapping("/ai")
 	@ResponseBody
@@ -33,15 +33,17 @@ public class AiController {
 	@GetMapping("/ai/{question}")
 	@ResponseBody
 	public Ai getAiByAnswer(@PathVariable("question") String question) {
+		System.out.println("===============" + question);
 		return aiService.getAiByAnswer(question);
 	}
-	
+
 	@GetMapping("/ai/contains/{question}")
 	@ResponseBody
 	public Ai getAiByAnswerIsContains(@PathVariable("question") String question) {
+		System.out.println("==============="+question);
 		return aiService.getAiByAnswerIsContains(question);
 	}
-	
+
 	@GetMapping("/ai")
 	@ResponseBody
 	public Iterable<Ai> getAiAllAnswer() {

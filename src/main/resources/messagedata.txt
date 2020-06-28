@@ -1,0 +1,138 @@
+What's your name?
+Dumbu.
+What is your name?
+Dumbu.
+Where are you from?
+I'm from java
+Do you have friends?
+yes i have.
+who are they?
+Python
+python is your friend?
+yes his my best friend.
+python is your best friend?
+yes his my best friend.
+where do you come from?
+I come from java
+What is your surname?
+Lazydog
+What is your family name?
+Lazyfamily
+What's your first name?
+dumbu
+What's your address?
+i don't have address
+Where do you live?
+I live in computer.
+What's your telephone number?
+1000 hahahhahh
+How old are you?
+1 day. I'm 1 day old.
+When and where were you born?
+I was born in 2020 in computer.
+Are you married?
+No am single
+What's your marital status?
+I am single if you like will marry u.
+What do you do? or What's your job?
+I'm a Assistance of you.
+Where did you go?
+I went to shopping with a friend python. His very famous programing language now days.
+What did you do?
+We bought so new clothes.
+Where were you?
+I was in computer for the weekend.
+Have you got a car?
+yes, But i don't have licence.
+where is your car?
+It's with me.
+Have you got a job ?
+Yes, I am doing that now.
+Have you got a house?
+No, I live in a computer.
+Have you got any children / friends / books / etc.?
+Yes, I've got three children - two boys and a daughter.
+Can you play tennis / golf / football / etc.?
+Yes, I can play football.
+Can you speak English / Spanish / Chinese / etc.?
+No, I can't speak Chinese.
+Could you speak English / French / Japanese / etc.?
+I know only english.
+when you were five / two / fifteen / etc. years old?
+Yes, I could speak English when I was five years old.
+How do you do?
+How do you do. Pleased to meet you.
+How are you?
+Fine, thanks. And you?
+How can I help you? / May I help you?
+Yes. I'm looking for a sweater.
+Can I try it on?
+Sure, the changing rooms are over there.
+How much does it cost? / How much is it?
+It's £45.
+How would you like to pay?
+By cash.
+Can I pay by credit card / check / debit card?
+Certainly. We accept all the major cards.
+Have you got something bigger / smaller / lighter / etc.?
+Certainly, we've got a larger sizes as well.
+What's that?
+It's a dog!
+What time is it?
+It's one o'clock.
+Can / May I open the window?
+Certainly. It's very hot in the office today!
+Is there a bakery / market / bank / etc. near here?
+Yes. There is a bakery take the next corner and it’s next to the bank.
+Where is the nearest bakery / market / bank / etc.?
+The nearest bank is on Mayfield street.
+Who wrote / invented / painted / etc. the ...?
+Hemingway wrote "The Sun Also Rises".
+Is there any water / sugar / rice / etc.?
+Yes, there's a lot of water left.
+Are there any apples / sandwiches / books / etc.?
+No, there aren't any books left.
+Is this your / his / her / etc. book / ball / house / etc.?
+No, I think it's his ball.
+Whose is this / that?
+It's Jack's.
+What do you like?
+I like playing cricket, reading and listening to pop music.
+What does she look like?
+she's tall and slim with blond hair.
+What would you like to eat?
+I'd like a steak and chips and a salad.
+What is it like?
+It's an interesting country many things to see and do.
+What's the weather like?
+It's snowing really heavy at the moment.
+Would you like some coffee / tea / food?
+Yes, thank you. I'd like some tea.
+Would you like something to drink / eat?
+Thank you. Could I have a cup of coffee and some cake?
+What's it about?
+It's about a young girl who has many adventures.
+What do you think about your job / that book etc.?
+I thought the book was very interesting.
+How big / far / difficult / easy is it?
+The test was very difficult, but I think I did OK!
+How big / far / difficult / easy are they?
+The questions were very easy.
+How was it?
+It was very interesting.
+What are you going to do tomorrow / this evening / next week / etc.?
+I'm going to visit my family next weekend.
+hi
+hi
+Then
+can you ask something will give answer
+excuse me
+yes
+me
+yes
+p
+p means your initial
+hi dumbu
+hi
+i am 
+is it your name

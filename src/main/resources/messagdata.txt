@@ -10,3 +10,9 @@ Q)i am fine
 A)good
 Q)ya i am so fine
 A)good
+Q)nice to meet you
+A)nice to meet you to
+Q)where are you from
+A)there is no any city but i am developed from java.
+Q)which city are you from
+A)there is no any city but i am developed from java.

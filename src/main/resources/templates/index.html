@@ -58,20 +58,34 @@ body {
   float: left;
   color: #999;
 }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 352px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  position: relative;
+}
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
 
 </style>
 </head>
 <body>
 
-<h2>Dumbu Talk</h2>
+<h2 class="w3-xxlarge">DUMBU<img src="/images/scooby4.png" alt="Avatar" style="width:10%;"/></h2>
 <br><br>
 <div class="maindiv">
 </div>
-<textarea id="textMessage" name="textMessage" rows="4" cols="50">
-type here 
+<textarea id="textMessage" name="textMessage" rows="4" cols="82" placeholder="Ask you..">
 </textarea>
 
-<button onclick=answerOfYourQuestion()>send</button>
+<button class="button" onclick=answerOfYourQuestion()>send</button>
 
 
 </body>
