@@ -19,7 +19,7 @@ public class AiService {
 	}
 
 	public Ai getAiByAnswer(String question) {
-		List<Ai> answer = aiRepo.findByQuestion(question);
+		List<Ai> answer = aiRepo.findByQuestion(question.toLowerCase());
 		if (answer.get(0) != null) {
 			return answer.get(0);
 		}
@@ -32,7 +32,7 @@ public class AiService {
 	}
 
 	public Ai getAiByAnswerIsContains(String question) {
-		List<Ai> myAnswer = (List<Ai>) aiRepo.findByQuestion(question);
+		List<Ai> myAnswer = (List<Ai>) aiRepo.findByQuestion(question.replace("[^a-zA-Z0-9]","").toLowerCase());
 		if (myAnswer.isEmpty()) {
 			List<Ai> answer = aiRepo.findByQuestionContaining(question);
 			if (answer.size() != 0) {

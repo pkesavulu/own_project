@@ -15,14 +15,14 @@ import com.dumbu.ai.ai.service.AiService;
 @Controller
 @RequestMapping("/robo")
 public class AiController {
-
+     
 	@Autowired
 	private AiService aiService;
 
 	@GetMapping(value = "/")
 	public String index() {
 		return "index";
-	}
+	} 
 
 	@PostMapping("/ai")
 	@ResponseBody
@@ -33,14 +33,12 @@ public class AiController {
 	@GetMapping("/ai/{question}")
 	@ResponseBody
 	public Ai getAiByAnswer(@PathVariable("question") String question) {
-		System.out.println("===============" + question);
 		return aiService.getAiByAnswer(question);
 	}
 
 	@GetMapping("/ai/contains/{question}")
 	@ResponseBody
 	public Ai getAiByAnswerIsContains(@PathVariable("question") String question) {
-		System.out.println("==============="+question);
 		return aiService.getAiByAnswerIsContains(question);
 	}
 
@@ -49,5 +47,6 @@ public class AiController {
 	public Iterable<Ai> getAiAllAnswer() {
 		return aiService.getAiAllAnswer();
 	}
+	
 
 }

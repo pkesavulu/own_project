@@ -18,10 +18,11 @@ public class AiApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(AiApplication.class, args);
 		AiService aiService = applicationContext.getBean("aiService", AiService.class);
- 
+  
 		try {
 			List<String> allLines = Files
-					.readAllLines(Paths.get("D:\\projects\\ai\\src\\main\\resources\\messagedata.txt"));
+					.readAllLines(Paths.get("src\\main\\resources\\messagedata.txt"));
+			//.readAllLines(Paths.get("E:\\Projects\\own_project\\src\\main\\resources\\messagedata.txt"));
 
 			for (int i = 0; i <= allLines.size(); i++) {
 				if (i == allLines.size()) {
@@ -32,7 +33,7 @@ public class AiApplication {
 				ai.setAnswer(allLines.get(i + 1).replace("A)", "").toLowerCase());
 				aiService.insertAi(ai);
 				i = i + 1;
-			}
+			} 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -62,7 +62,7 @@ body {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 6px 352px;
+  padding: 6px 348px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -77,16 +77,94 @@ body {
 </style>
 </head>
 <body>
-
+ <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
 <h2 class="w3-xxlarge">DUMBU<img src="/images/scooby4.png" alt="Avatar" style="width:10%;"/></h2>
 <br><br>
 <div class="maindiv">
 </div>
-<textarea id="textMessage" name="textMessage" rows="4" cols="82" placeholder="Ask you..">
+<textarea id="textMessage" name="textMessage" rows="4" cols="82" placeholder="Ask Me ...">
 </textarea>
 
 <button class="button" onclick=answerOfYourQuestion()>send</button>
 
+<span>Results:</span>
+    <label><input type="radio" name="recognition-type" value="final" checked="checked" /> Final only</label>
+    <label><input type="radio" name="recognition-type" value="interim" /> Interim</label>
 
+<h3>Log</h3>
+<div id="log"></div>
+
+<div class="buttons-wrapper">
+      <button id="button-play-ws" class="button-demo">Start Speak</button>
+      <button id="button-stop-ws" class="button-demo">Stop Speak</button>
+      <button id="clear-all" class="button-demo">Clear all</button>
+</div>
+<span id="ws-unsupported" class="hidden">API not supported</span>
+
+   <script>
+      // Test browser support
+      window.SpeechRecognition = window.SpeechRecognition       ||
+                                 window.webkitSpeechRecognition ||
+                                 null;
+
+      if (window.SpeechRecognition === null) {
+        document.getElementById('ws-unsupported').classList.remove('hidden');
+        document.getElementById('button-play-ws').setAttribute('disabled', 'disabled');
+        document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
+      } else {
+        var recognizer = new window.SpeechRecognition();
+        var transcription = document.getElementById('textMessage');
+        var log = document.getElementById('log');
+
+        // Recogniser doesn't stop listening even if the user pauses
+        recognizer.continuous = true;
+
+        // Start recognising
+        recognizer.onresult = function(event) {
+          transcription.value = '';
+
+          for (var i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              transcription.value = event.results[i][0].transcript.trim();
+              console.log(" transcription.textContent : "+ transcription.textContent)
+            } else {
+              transcription.value += event.results[i][0].transcript.trim();
+              console.log(" transcription.textContent2 : "+ transcription.textContent)
+            }
+          }
+        };
+
+        // Listen for errors
+        recognizer.onerror = function(event) {
+          log.innerHTML = 'Recognition error: ' + event.message + '<br />' + log.innerHTML;
+          console.log(" log.innerHTML : "+ log.innerHTML)
+        };
+
+        document.getElementById('button-play-ws').addEventListener('click', function() {
+          // Set if we need interim results
+          recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
+
+          try {
+            recognizer.start();
+            log.innerHTML = 'Recognition started' + '<br />' + log.innerHTML;
+             console.log(" log.innerHTML1 : "+ log.innerHTML)
+          } catch(ex) {
+            log.innerHTML = 'Recognition error: ' + ex.message + '<br />' + log.innerHTML;
+             console.log(" log.innerHTML2 : "+ log.innerHTML)
+          }
+        });
+
+        document.getElementById('button-stop-ws').addEventListener('click', function() {
+          recognizer.stop();
+          log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
+           console.log("stop log.innerHTML : "+ log.innerHTML)
+        });
+
+        document.getElementById('clear-all').addEventListener('click', function() {
+          transcription.value = '';
+          log.textContent = '';
+        });
+      }
+    </script>
 </body>
 </html>
